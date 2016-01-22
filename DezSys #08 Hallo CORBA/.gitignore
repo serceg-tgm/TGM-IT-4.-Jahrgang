@@ -1,0 +1,16 @@
+# IDEA
+.idea
+dezsys08.iml
+
+#eclipse
+.classpath
+.project
+.settings
+
+#maven
+/target/
+
+#other
+documents/omniORB.pdf
+src/main/resources/examples
+src/main/resources/README.unix.txt

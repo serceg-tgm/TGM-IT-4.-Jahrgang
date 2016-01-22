@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="4AHITT_Erceg_Stefan_DEZSYS03_transformation.xsl"?>
+<klassenliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- Klassenliste für die 4AHITT -->
+	<klasse jahrgang='4AHITT'>
+		<schueler katalognummer='01'>
+			<vorname>Klaus</vorname>
+			<nachname>Ableitinger</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>05.03.1997</geburtsdatum>
+			<religionsbekenntnis>röm.kath.</religionsbekenntnis>
+			<telefonnummer>06508871425</telefonnummer>
+		</schueler>
+		<schueler katalognummer='03'>
+			<vorname>Stefan</vorname>
+			<nachname>Erceg</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>02.12.1996</geburtsdatum>
+			<religionsbekenntnis>röm.kath.</religionsbekenntnis>
+			<telefonnummer>06768912263</telefonnummer>
+		</schueler>
+	</klasse>
+	<!-- Klassenliste für die 4YHIT -->
+	<klasse jahrgang='4YHIT'>
+		<schueler katalognummer='12'>
+			<vorname>Adin</vorname>
+			<nachname>Karic</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>06.03.1997</geburtsdatum>
+			<religionsbekenntnis>Islam</religionsbekenntnis>
+			<telefonnummer>06769125479</telefonnummer>
+		</schueler>
+		<schueler katalognummer='17'>
+			<vorname>Martin</vorname>
+			<nachname>Kritzl</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>09.02.1997</geburtsdatum>
+			<religionsbekenntnis>ev.</religionsbekenntnis>
+			<telefonnummer>06996592814</telefonnummer>
+		</schueler>
+	</klasse>
+	<!-- Klassenliste für die 4CHITM -->
+	<klasse jahrgang='4CHITM'>
+		<schueler katalognummer='01'>
+			<vorname>Michael</vorname>
+			<nachname>Bruckner</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>28.11.1996</geburtsdatum>
+			<religionsbekenntnis>röm.kath.</religionsbekenntnis>
+			<telefonnummer>06811448324</telefonnummer>
+		</schueler>
+		<schueler katalognummer='21'>
+			<vorname>Marc</vorname>
+			<nachname>Schwenzner</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>08.05.1997</geburtsdatum>
+			<religionsbekenntnis>röm.kath.</religionsbekenntnis>
+			<telefonnummer>06502865908</telefonnummer>
+		</schueler>
+	</klasse>
+	<!-- Klassenliste für die 5AHITT -->
+	<klasse jahrgang='5AHITT'>
+		<schueler katalognummer='03'>
+			<vorname>Hagen</vorname>
+			<nachname>Fock</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>19.06.1996</geburtsdatum>
+			<religionsbekenntnis>o.b.</religionsbekenntnis>
+			<telefonnummer>06768214713</telefonnummer>
+		</schueler>
+		<schueler katalognummer='05'>
+			<vorname>Stefan</vorname>
+			<nachname>Geyer</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>28.08.1996</geburtsdatum>
+			<religionsbekenntnis>röm.kath.</religionsbekenntnis>
+			<telefonnummer>06502880917</telefonnummer>
+		</schueler>
+	</klasse>
+	<!-- Klassenliste für die 5BHITM -->
+	<klasse jahrgang='5BHITM'>
+		<schueler katalognummer='10'>
+			<vorname>Paul</vorname>
+			<nachname>Kalauner</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>09.02.1996</geburtsdatum>
+			<religionsbekenntnis>o.b.</religionsbekenntnis>
+			<telefonnummer>069919533789</telefonnummer>
+		</schueler>
+		<schueler katalognummer='15'>
+			<vorname>Mathias</vorname>
+			<nachname>Ritter</nachname>
+			<geschlecht>männlich</geschlecht>
+			<geburtsdatum>03.09.1995</geburtsdatum>
+			<religionsbekenntnis>röm.kath.</religionsbekenntnis>
+			<telefonnummer>06607560941</telefonnummer>
+		</schueler>
+	</klasse>
+</klassenliste>

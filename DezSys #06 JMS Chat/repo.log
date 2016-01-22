@@ -1,0 +1,453 @@
+commit 96bd8d76fbd0e472cdd55199677900471d17dd21
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Tue Nov 25 18:51:44 2014 +0100
+
+    add testcase 'change user'
+
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx | Bin 983336 -> 997429 bytes
+ Files/Erceg_Kritzl_DezSys06_Protokoll.pdf  | Bin 0 -> 1509871 bytes
+ Files/Testen (11).JPG                      | Bin 0 -> 13712 bytes
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6477bf321c9fe93baa46f283296085466bca3715
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Tue Nov 25 18:45:54 2014 +0100
+
+    generated JavaDoc
+
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx         | Bin 983191 -> 983336 bytes
+ doc/allclasses-frame.html                          |  31 ++
+ doc/allclasses-noframe.html                        |  31 ++
+ .../erceg_kritzl/dezsys06/connection/Connect.html  | 486 +++++++++++++++++
+ .../dezsys06/connection/Connectable.html           | 382 ++++++++++++++
+ .../dezsys06/connection/JMSClient.html             | 312 +++++++++++
+ .../dezsys06/connection/JMSServer.html             | 348 +++++++++++++
+ .../erceg_kritzl/dezsys06/connection/Message.html  | 291 +++++++++++
+ .../dezsys06/connection/MessageBehavior.html       | 237 +++++++++
+ .../dezsys06/connection/Receiveable.html           | 269 ++++++++++
+ .../erceg_kritzl/dezsys06/connection/Sendable.html | 257 +++++++++
+ .../dezsys06/connection/class-use/Connect.html     | 124 +++++
+ .../dezsys06/connection/class-use/Connectable.html | 244 +++++++++
+ .../dezsys06/connection/class-use/JMSClient.html   | 124 +++++
+ .../dezsys06/connection/class-use/JMSServer.html   | 124 +++++
+ .../dezsys06/connection/class-use/Message.html     | 124 +++++
+ .../connection/class-use/MessageBehavior.html      | 232 +++++++++
+ .../dezsys06/connection/class-use/Receiveable.html | 201 ++++++++
+ .../dezsys06/connection/class-use/Sendable.html    | 201 ++++++++
+ .../dezsys06/connection/package-frame.html         |  30 ++
+ .../dezsys06/connection/package-summary.html       | 197 +++++++
+ .../dezsys06/connection/package-tree.html          | 151 ++++++
+ .../dezsys06/connection/package-use.html           | 210 ++++++++
+ doc/at/erceg_kritzl/dezsys06/display/CLI.html      | 380 ++++++++++++++
+ doc/at/erceg_kritzl/dezsys06/display/Control.html  | 422 +++++++++++++++
+ doc/at/erceg_kritzl/dezsys06/display/Display.html  | 269 ++++++++++
+ .../dezsys06/display/class-use/CLI.html            | 124 +++++
+ .../dezsys06/display/class-use/Control.html        | 190 +++++++
+ .../dezsys06/display/class-use/Display.html        | 192 +++++++
+ .../dezsys06/display/package-frame.html            |  25 +
+ .../dezsys06/display/package-summary.html          | 167 ++++++
+ .../dezsys06/display/package-tree.html             | 146 ++++++
+ .../erceg_kritzl/dezsys06/display/package-use.html | 185 +++++++
+ doc/at/erceg_kritzl/dezsys06/handler/Handler.html  | 237 +++++++++
+ .../dezsys06/handler/InputHandler.html             | 325 ++++++++++++
+ .../dezsys06/handler/class-use/Handler.html        | 201 ++++++++
+ .../dezsys06/handler/class-use/InputHandler.html   | 124 +++++
+ .../dezsys06/handler/package-frame.html            |  24 +
+ .../dezsys06/handler/package-summary.html          | 161 ++++++
+ .../dezsys06/handler/package-tree.html             | 141 +++++
+ .../erceg_kritzl/dezsys06/handler/package-use.html | 180 +++++++
+ doc/constant-values.html                           | 124 +++++
+ doc/deprecated-list.html                           | 124 +++++
+ doc/help-doc.html                                  | 229 ++++++++
+ doc/index-files/index-1.html                       | 133 +++++
+ doc/index-files/index-10.html                      | 135 +++++
+ doc/index-files/index-11.html                      | 171 ++++++
+ doc/index-files/index-2.html                       | 155 ++++++
+ doc/index-files/index-3.html                       | 131 +++++
+ doc/index-files/index-4.html                       | 187 +++++++
+ doc/index-files/index-5.html                       | 131 +++++
+ doc/index-files/index-6.html                       | 147 ++++++
+ doc/index-files/index-7.html                       | 139 +++++
+ doc/index-files/index-8.html                       | 133 +++++
+ doc/index-files/index-9.html                       | 139 +++++
+ doc/index.html                                     |  74 +++
+ doc/overview-frame.html                            |  23 +
+ doc/overview-summary.html                          | 143 +++++
+ doc/overview-tree.html                             | 158 ++++++
+ doc/package-list                                   |   3 +
+ doc/script.js                                      |  30 ++
+ doc/stylesheet.css                                 | 574 +++++++++++++++++++++
+ 62 files changed, 11182 insertions(+)
+
+commit f26aba0c08b7cd65965065cbf514d599dc11bbae
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Tue Nov 25 18:42:23 2014 +0100
+
+    clean code
+
+ src/at/erceg_kritzl/dezsys06/connection/Connect.java   | 3 ---
+ src/at/erceg_kritzl/dezsys06/connection/JMSClient.java | 1 -
+ src/at/erceg_kritzl/dezsys06/connection/JMSServer.java | 1 -
+ src/at/erceg_kritzl/dezsys06/display/CLI.java          | 1 -
+ 4 files changed, 6 deletions(-)
+
+commit f0ef68a3cf961172469c7b80aafef443ea377f28
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Tue Nov 25 18:38:47 2014 +0100
+
+    close connection before login
+
+ .../erceg_kritzl/dezsys06/connection/Connect.java  | 76 +++++++++++++++-------
+ .../dezsys06/connection/Connectable.java           |  6 ++
+ .../dezsys06/connection/JMSServer.java             |  9 ++-
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  5 ++
+ src/at/erceg_kritzl/dezsys06/display/Control.java  |  2 +-
+ .../dezsys06/handler/InputHandler.java             |  5 +-
+ 6 files changed, 72 insertions(+), 31 deletions(-)
+
+commit d00eb895e02a867688bb93e75f1c5889aefdf711
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Tue Nov 25 18:27:50 2014 +0100
+
+    add testcases
+
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx | Bin 603788 -> 983191 bytes
+ Files/Testen (1).JPG                       | Bin 0 -> 14608 bytes
+ Files/Testen (10).JPG                      | Bin 0 -> 47008 bytes
+ Files/Testen (2).JPG                       | Bin 0 -> 89470 bytes
+ Files/Testen (3).JPG                       | Bin 0 -> 18443 bytes
+ Files/Testen (4).JPG                       | Bin 0 -> 30727 bytes
+ Files/Testen (5).JPG                       | Bin 0 -> 17937 bytes
+ Files/Testen (6).JPG                       | Bin 0 -> 28360 bytes
+ Files/Testen (7).JPG                       | Bin 0 -> 39656 bytes
+ Files/Testen (8).JPG                       | Bin 0 -> 36742 bytes
+ Files/Testen (9).JPG                       | Bin 0 -> 51981 bytes
+ 11 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c0d5383fcdd1b3dae733a6297eb4334141d6d7b0
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Tue Nov 25 17:32:40 2014 +0100
+
+    fix bug on EXIT command
+
+ .../erceg_kritzl/dezsys06/handler/InputHandler.java  | 20 ++++++++++++--------
+ 1 file changed, 12 insertions(+), 8 deletions(-)
+
+commit 2d0a420aeed27baafad2b9f0da4210213cbb5271
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Tue Nov 25 17:24:40 2014 +0100
+
+    fix bug on HELP command
+
+ .../dezsys06/handler/InputHandler.java             | 35 +++++++++++-----------
+ 1 file changed, 18 insertions(+), 17 deletions(-)
+
+commit ee7b6f771b311371c05c83f77513b1d9a555e408
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Tue Nov 25 17:16:03 2014 +0100
+
+    change output on CLI
+
+ .classpath                                    | 2 +-
+ src/at/erceg_kritzl/dezsys06/display/CLI.java | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 27c1607d12dc2ec5ce0b87afe20c8ce53b296262
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Mon Nov 24 00:20:33 2014 +0100
+
+    add github-link to protocol
+
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx | Bin 603497 -> 603788 bytes
+ Files/JMS-Chat_v2.png                      | Bin 0 -> 396479 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit bb1ff7cbb53e42f9f3351272f001ec3e33a18fb8
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Mon Nov 24 00:14:56 2014 +0100
+
+    changed UML, add lessons learned to protocol
+
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx | Bin 203688 -> 603497 bytes
+ Files/JMS-Chat_v2.asta                     | Bin 24339 -> 31331 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7a4dc2fd3b9b58ff57280595335ba0173adcf445
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Nov 23 23:39:28 2014 +0100
+
+    add Arbeitsdurchfuehrung to protocol
+
+ .classpath                                 |   2 +-
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx | Bin 202378 -> 203688 bytes
+ src/JMSChatReceiver.java                   |  73 --------------------
+ src/JMSChatSender.java                     |  75 ---------------------
+ src/Main.java                              |  11 ---
+ src/test.java                              | 104 -----------------------------
+ 6 files changed, 1 insertion(+), 264 deletions(-)
+
+commit 053681fd49280d1cca19b842fd2b3ca9c7138668
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 23:12:32 2014 +0100
+
+    extend Runnable on Display and CLI
+
+ src/at/erceg_kritzl/dezsys06/connection/JMSServer.java   | 2 +-
+ src/at/erceg_kritzl/dezsys06/connection/Receiveable.java | 7 +------
+ src/at/erceg_kritzl/dezsys06/display/CLI.java            | 2 +-
+ src/at/erceg_kritzl/dezsys06/display/Display.java        | 6 +-----
+ 4 files changed, 4 insertions(+), 13 deletions(-)
+
+commit 034643df939993fc35e909ada39ad63c9730d98b
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 23:00:23 2014 +0100
+
+    rename parameter on setQueue
+
+ src/at/erceg_kritzl/dezsys06/connection/Connectable.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 42937b64f8c077d5ccd6bb1871621a0a5f611e1a
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 22:18:32 2014 +0100
+
+    Change output from Sysout to logger, change InputHandler
+
+ .classpath                                         |   2 +-
+ .../dezsys06/connection/JMSServer.java             |  13 +-
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  12 +-
+ src/at/erceg_kritzl/dezsys06/display/Display.java  |   6 -
+ .../dezsys06/handler/InputHandler.java             | 140 ++++++++++-----------
+ 5 files changed, 83 insertions(+), 90 deletions(-)
+
+commit 6d0d2e0716438bc16294e9077da40fe5a1c619c1
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Nov 23 21:27:55 2014 +0100
+
+    correct comments
+
+ .classpath                                         |  2 +-
+ .../dezsys06/connection/Connectable.java           |  7 +++--
+ .../dezsys06/connection/JMSServer.java             | 12 ++++----
+ .../dezsys06/connection/Receiveable.java           |  2 +-
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  6 ++--
+ .../dezsys06/handler/InputHandler.java             | 33 +++++++++++-----------
+ 6 files changed, 31 insertions(+), 31 deletions(-)
+
+commit 72a36c0cfbfdcbb3c8f4fa56d47f91393287bcd4
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 21:08:34 2014 +0100
+
+    add comments
+
+ .../erceg_kritzl/dezsys06/connection/Connect.java  | 57 +---------------------
+ .../dezsys06/connection/Connectable.java           |  8 +--
+ .../dezsys06/connection/JMSClient.java             |  7 ++-
+ .../dezsys06/connection/JMSServer.java             | 41 ++++++----------
+ .../erceg_kritzl/dezsys06/connection/Message.java  |  5 --
+ .../dezsys06/connection/MessageBehavior.java       |  4 ++
+ .../erceg_kritzl/dezsys06/connection/Sendable.java |  1 +
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  2 +
+ src/at/erceg_kritzl/dezsys06/display/Display.java  |  8 +++
+ src/at/erceg_kritzl/dezsys06/handler/Handler.java  |  2 +-
+ .../dezsys06/handler/InputHandler.java             | 38 +++++++--------
+ 11 files changed, 56 insertions(+), 117 deletions(-)
+
+commit 435539aaab309f6a138d5871ef3344d36af7678a
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 20:20:59 2014 +0100
+
+    fix mail bug
+
+ src/at/erceg_kritzl/dezsys06/connection/JMSServer.java | 17 +++--------------
+ 1 file changed, 3 insertions(+), 14 deletions(-)
+
+commit d1bbac8db7af086951b67e2a76cb41b8109009d2
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 20:02:52 2014 +0100
+
+    Add durable Messages for topic
+
+ .../erceg_kritzl/dezsys06/connection/Connect.java  |  20 +--
+ .../dezsys06/connection/Connectable.java           |   6 -
+ .../dezsys06/connection/JMSClient.java             |   2 +-
+ .../dezsys06/connection/JMSServer.java             |  31 +++--
+ .../dezsys06/handler/InputHandler.java             | 139 ++++++++++++---------
+ 5 files changed, 106 insertions(+), 92 deletions(-)
+
+commit ba441b1c20916b4e6924a8b60ac94471ab24367c
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Sun Nov 23 14:03:36 2014 +0100
+
+    Try to change to substcriber, reorganise Connect, change inputlines in
+    InputHandler, add example for substribers
+
+ .../erceg_kritzl/dezsys06/connection/Connect.java  | 168 +++++++++++++++++++++
+ .../dezsys06/connection/ConnectTopic.java          | 133 ----------------
+ .../dezsys06/connection/Connectable.java           |  22 ++-
+ .../dezsys06/connection/JMSClient.java             |   3 +-
+ .../dezsys06/connection/JMSServer.java             |  16 +-
+ src/at/erceg_kritzl/dezsys06/display/Control.java  |   6 +-
+ .../dezsys06/handler/InputHandler.java             |  46 +++---
+ src/test.java                                      | 104 +++++++++++++
+ 8 files changed, 330 insertions(+), 168 deletions(-)
+
+commit bc58b1de3527410cfbb9ce2e27b41b2357d522ec
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Fri Nov 21 18:52:01 2014 +0100
+
+    change required url for connection
+
+ src/at/erceg_kritzl/dezsys06/connection/ConnectTopic.java | 2 +-
+ src/at/erceg_kritzl/dezsys06/handler/InputHandler.java    | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 250c7f377563e0171da23080cb53dda4f95ac191
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Fri Nov 21 18:40:44 2014 +0100
+
+    move username from Control to ConnectTopic, add source username to
+    message
+
+ .classpath                                           |  2 +-
+ .../dezsys06/connection/ConnectTopic.java            | 15 +++++++++++++++
+ .../dezsys06/connection/Connectable.java             | 12 ++++++++++++
+ .../erceg_kritzl/dezsys06/connection/JMSClient.java  |  3 +++
+ .../erceg_kritzl/dezsys06/connection/JMSServer.java  |  3 ++-
+ src/at/erceg_kritzl/dezsys06/display/Control.java    |  6 ------
+ .../erceg_kritzl/dezsys06/handler/InputHandler.java  | 20 ++++++++++----------
+ 7 files changed, 43 insertions(+), 18 deletions(-)
+
+commit 2c632622e165b435e14aca61222c487a0526979b
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Fri Nov 21 17:15:16 2014 +0100
+
+    create mail
+
+ src/at/erceg_kritzl/dezsys06/connection/ConnectTopic.java |  6 +++---
+ src/at/erceg_kritzl/dezsys06/handler/InputHandler.java    | 13 ++++++++++---
+ 2 files changed, 13 insertions(+), 6 deletions(-)
+
+commit 8f34d458a8398e87c9a2840f50258fa960a21214
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Fri Nov 21 16:53:22 2014 +0100
+
+    add changed UML
+
+ Files/JMS-Chat_v2.asta | Bin 0 -> 24339 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3567ab5210ca255e32bcbcbb769f65f76d1bc000
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Fri Nov 21 16:52:17 2014 +0100
+
+    enter Chatroom, write Message
+
+ .../dezsys06/connection/ConnectTopic.java          |   4 +-
+ .../dezsys06/connection/JMSServer.java             |   3 +-
+ .../dezsys06/connection/Receiveable.java           |   5 +-
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  32 +++++--
+ src/at/erceg_kritzl/dezsys06/display/Control.java  |  24 ++++-
+ src/at/erceg_kritzl/dezsys06/display/Display.java  |   6 ++
+ src/at/erceg_kritzl/dezsys06/handler/Handler.java  |   7 +-
+ .../dezsys06/handler/InputHandler.java             | 106 ++++++++++-----------
+ 8 files changed, 114 insertions(+), 73 deletions(-)
+
+commit 74de0d80595f81e785356177e6a30eccb2e00d1b
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Fri Nov 21 12:26:14 2014 +0100
+
+    implement JMSServer, Display; bugfixes
+
+ .../dezsys06/connection/JMSServer.java             | 76 +++++++++++++++++++++-
+ .../dezsys06/connection/Receiveable.java           |  5 ++
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      | 32 ++++++++-
+ src/at/erceg_kritzl/dezsys06/display/Control.java  | 14 +++-
+ src/at/erceg_kritzl/dezsys06/display/Display.java  |  7 +-
+ .../dezsys06/handler/InputHandler.java             | 16 +++++
+ 6 files changed, 141 insertions(+), 9 deletions(-)
+
+commit 36009ccbaa835b9bb05f5e6395a0b46599a36bbc
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Thu Nov 20 23:46:39 2014 +0100
+
+    implement InputHandler, JMSClient, Connection, Message; add Interfaces
+    Sendable, Receiveable; delete CommandType; rename Executor Control; add
+    comments
+
+ .../dezsys06/connection/ConnectTopic.java          |  97 +++++++++++++++++---
+ .../dezsys06/connection/Connectable.java           |  35 +++++++-
+ .../dezsys06/connection/JMSClient.java             |  41 +++++++--
+ .../dezsys06/connection/JMSServer.java             |  12 ++-
+ .../erceg_kritzl/dezsys06/connection/Message.java  |  16 +++-
+ .../dezsys06/connection/MessageBehavior.java       |   5 ++
+ .../dezsys06/connection/Receiveable.java           |  19 ++++
+ .../erceg_kritzl/dezsys06/connection/Sendable.java |  19 ++++
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  11 ++-
+ src/at/erceg_kritzl/dezsys06/display/Control.java  |  83 +++++++++++++++++
+ src/at/erceg_kritzl/dezsys06/display/Display.java  |   9 ++
+ src/at/erceg_kritzl/dezsys06/display/Executor.java |   9 --
+ .../erceg_kritzl/dezsys06/handler/CommandType.java |  19 ----
+ src/at/erceg_kritzl/dezsys06/handler/Handler.java  |   9 ++
+ .../dezsys06/handler/InputHandler.java             | 100 +++++++++++++++++++--
+ 15 files changed, 422 insertions(+), 62 deletions(-)
+
+commit 740ff5bf99a1fd8c67ef8b1ccd312a86f1396b30
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Nov 20 19:40:23 2014 +0100
+
+    add Designueberlegung to protocol
+
+ Files/Erceg_Kritzl_DezSys06_Protokoll.docx | Bin 0 -> 202378 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 26ec6f6fd443a0013d74fafa812101ce81c1fd10
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Nov 20 18:16:36 2014 +0100
+
+    create UML & generate UML-classes
+
+ Files/JMS-Chat.asta                                | Bin 0 -> 20942 bytes
+ Files/JMS-Chat.png                                 | Bin 0 -> 145342 bytes
+ .../dezsys06/connection/ConnectTopic.java          |  45 +++++++++++++++++++++
+ .../dezsys06/connection/Connectable.java           |  18 +++++++++
+ .../dezsys06/connection/JMSClient.java             |  17 ++++++++
+ .../dezsys06/connection/JMSServer.java             |  17 ++++++++
+ .../erceg_kritzl/dezsys06/connection/Message.java  |  15 +++++++
+ .../dezsys06/connection/MessageBehavior.java       |   7 ++++
+ src/at/erceg_kritzl/dezsys06/display/CLI.java      |  13 ++++++
+ src/at/erceg_kritzl/dezsys06/display/Display.java  |   7 ++++
+ src/at/erceg_kritzl/dezsys06/display/Executor.java |   9 +++++
+ .../erceg_kritzl/dezsys06/handler/CommandType.java |  19 +++++++++
+ src/at/erceg_kritzl/dezsys06/handler/Handler.java  |   7 ++++
+ .../dezsys06/handler/InputHandler.java             |  13 ++++++
+ 14 files changed, 187 insertions(+)
+
+commit cbfd308dbd04f9248ee46a2fa26e4e833733dd82
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Nov 20 15:58:48 2014 +0100
+
+    changed to instruction-version
+
+ .classpath               |  2 +-
+ src/JMSChatReceiver.java | 29 ++++++++---------------------
+ src/JMSChatSender.java   | 46 ++++++----------------------------------------
+ src/Main.java            |  7 ++++---
+ 4 files changed, 19 insertions(+), 65 deletions(-)
+
+commit aeca0f6195b7d02919db14ec661884629b9ed4ec
+Author: tgm-mkritzl <mkritzl@student.tgm.ac.at>
+Date:   Thu Nov 20 14:58:45 2014 +0100
+
+    Create Project
+
+ .classpath                 |   7 +++
+ .gitignore                 |   1 +
+ .project                   |  17 +++++++
+ build.xml                  |  53 ++++++++++++++++++++++
+ lib/activemq-all-5.8.0.jar | Bin 0 -> 5830599 bytes
+ src/JMSChatReceiver.java   |  86 +++++++++++++++++++++++++++++++++++
+ src/JMSChatSender.java     | 109 +++++++++++++++++++++++++++++++++++++++++++++
+ src/Main.java              |  10 +++++
+ src/log4j.properties       |  28 ++++++++++++
+ 9 files changed, 311 insertions(+)

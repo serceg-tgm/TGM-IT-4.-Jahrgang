@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<!-- Dateiname: Buchbestand.xml -->
+
+<BUCHBESTAND>
+   <BUCH Einband="Taschenbuch" Lagernd="ja">
+      <TITEL>The Adventures of Huckleberry Finn</TITEL>
+      <AUTOR>Mark Twain</AUTOR>
+      <SEITEN>336</SEITEN>
+      <PREIS>12.75</PREIS>
+   </BUCH>
+   <BUCH Einband="Taschenbuch" Lagernd="ja">
+      <TITEL>In der Strafkolonie</TITEL>
+      <AUTOR>Franz Kafka</AUTOR>
+      <SEITEN>125</SEITEN>
+      <PREIS>9.90</PREIS>
+   </BUCH>
+   <BUCH Einband="Gebundene Ausgabe" Lagernd="ja">
+      <TITEL>Leaves of Grass</TITEL>
+      <AUTOR>Walt Whitman</AUTOR>
+      <SEITEN>462</SEITEN>
+      <PREIS>25.00</PREIS>
+   </BUCH>
+   <BUCH Einband="Gebundene Ausgabe" Lagernd="ja">
+      <TITEL>Der Graf von Monte Christo</TITEL>
+      <AUTOR>Alexandre Dumas</AUTOR>
+      <SEITEN>760</SEITEN>
+      <PREIS>19.00</PREIS>
+   </BUCH>
+   <BUCH Einband="Taschenbuch" Lagernd="nein">
+      <TITEL>The Legend of Sleepy Hollow</TITEL>
+      <AUTOR>Washington Irving</AUTOR>
+      <SEITEN>98</SEITEN>
+      <PREIS>2.50</PREIS>
+   </BUCH>
+   <BUCH Einband="Gebundene Ausgabe" Lagernd="ja">
+      <TITEL>Moby-Dick</TITEL>
+      <AUTOR>Herman Melville</AUTOR>
+      <SEITEN>724</SEITEN>
+      <PREIS>22.00</PREIS>
+   </BUCH>
+   <BUCH Einband="Taschenbuch" Lagernd="nein">
+      <TITEL>The Scarlet Letter</TITEL>
+      <AUTOR>Nathaniel Hawthorne</AUTOR>
+      <SEITEN>253</SEITEN>
+      <PREIS>7.80</PREIS>
+   </BUCH>
+   <BUCH Einband="Gebundene Ausgabe" Lagernd="ja">
+      <TITEL>Harry Potter und der Stein der Weisen</TITEL>
+      <AUTOR>Joanne K. Rowling</AUTOR>
+      <EINBAND>Gebundene Ausgabe</EINBAND>
+      <SEITEN>335</SEITEN>
+      <PREIS>12.00</PREIS>
+   </BUCH>
+   <BUCH Einband="Taschenbuch" Lagernd="ja">
+      <TITEL>Der Prozess</TITEL>
+      <AUTOR>F. Kafka</AUTOR>
+      <SEITEN>217</SEITEN>
+      <PREIS>13.80</PREIS>
+   </BUCH>
+</BUCHBESTAND>
