@@ -1,0 +1,1 @@
+kunstschau;100000;100;Kunstschau%inc%;%dateInc%;Land%inc%;Ort%inc%

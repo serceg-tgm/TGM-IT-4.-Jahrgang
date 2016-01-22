@@ -1,0 +1,239 @@
+commit 8f46ae602cb708cf9a422b501f12e4a861b61254
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Mar 11 16:49:33 2015 +0100
+
+    finished documentation
+
+ files/Erceg_Geyer_INSY_A05.docx | Bin 60113 -> 253082 bytes
+ files/Erceg_Geyer_INSY_A05.pdf  | Bin 0 -> 818933 bytes
+ files/UML-Diagramm.asta         | Bin 21478 -> 29471 bytes
+ files/UML-Diagramm.png          | Bin 0 -> 190426 bytes
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e42d5a0a6ec5c8813f5f49b6bd6fe6508a6508a4
+Merge: 5515131 57dbe51
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Mar 11 15:39:25 2015 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5515131a23157221d1f91ba124147bf860b27794
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Mar 11 15:38:07 2015 +0100
+
+    Edited documentation, added README
+
+ files/Erceg_Geyer_INSY_A05.docx                    | Bin 57931 -> 60113 bytes
+ files/README.md                                    |  11 +
+ insy05.iml                                         |  17 +-
+ out.html                                           |   1 -
+ pom.xml                                            |  50 +-
+ src/main/java/at/erceggeyer/insy05/Main.java       |  16 +-
+ .../erceggeyer/insy05/cli/CommandLineParser.java   |  46 +-
+ src/main/java/at/erceggeyer/insy05/cli/Input.java  |  16 +-
+ .../at/erceggeyer/insy05/rm/HtmlRmExporter.java    |  79 --
+ .../java/at/erceggeyer/insy05/rm/RmExporter.java   |  49 --
+ .../at/erceggeyer/insy05/rm/RtfRMExporter.java     |  79 --
+ .../erceggeyer/insy05/schema/SchemaExporter.java   |  47 ++
+ .../insy05/schema/erm/AstahErmExporter.java        | 228 ++++++
+ .../insy05/schema/rm/HtmlRmExporter.java           |  91 +++
+ .../targets/EntityRelationshipDiagramTarget.java   |  67 ++
+ .../insy05/targets/RelationalModelTarget.java      |  37 +-
+ src/main/java/at/sgeyer/insy04/dbms/DBMS.java      |   1 +
+ .../java/at/sgeyer/insy04/dbms/DBMSFactory.java    |   2 +
+ src/main/java/at/sgeyer/insy04/dbms/MySQL.java     |   2 +-
+ .../java/at/sgeyer/insy04/dbms/PostgreSQL.java     |  50 ++
+ src/main/java/com/tutego/jrtf/Rtf.java             | 468 ------------
+ src/main/java/com/tutego/jrtf/RtfDocfmt.java       | 282 --------
+ src/main/java/com/tutego/jrtf/RtfException.java    |  75 --
+ src/main/java/com/tutego/jrtf/RtfFields.java       | 111 ---
+ src/main/java/com/tutego/jrtf/RtfHeader.java       |  91 ---
+ src/main/java/com/tutego/jrtf/RtfHeaderColor.java  | 100 ---
+ src/main/java/com/tutego/jrtf/RtfHeaderFont.java   | 291 --------
+ src/main/java/com/tutego/jrtf/RtfInfo.java         | 109 ---
+ src/main/java/com/tutego/jrtf/RtfPara.java         | 243 -------
+ src/main/java/com/tutego/jrtf/RtfPicture.java      | 266 -------
+ src/main/java/com/tutego/jrtf/RtfRow.java          | 183 -----
+ .../jrtf/RtfSectionFormatAndHeaderFooter.java      | 280 --------
+ src/main/java/com/tutego/jrtf/RtfTemplate.java     | 173 -----
+ src/main/java/com/tutego/jrtf/RtfText.java         | 793 ---------------------
+ src/main/java/com/tutego/jrtf/RtfTextPara.java     | 643 -----------------
+ src/main/java/com/tutego/jrtf/RtfUnit.java         |  57 --
+ src/main/java/empty                                |   0
+ src/main/resources/empty                           |   0
+ ~$out.rtf                                          | Bin 162 -> 0 bytes
+ 39 files changed, 652 insertions(+), 4402 deletions(-)
+
+commit 57dbe51c60771c9ef478cc8e05540e5494924e3a
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Jan 28 09:38:58 2015 +0100
+
+    edited uml diagram
+
+ files/UML-Diagramm.asta | Bin 19848 -> 21478 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a23a466b61dbb93d35e24bc4042924d689cb9bd3
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 28 08:59:05 2015 +0100
+
+    merge
+
+ src/main/java/at/erceggeyer/insy05/rm/HtmlRmExporter.java | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit df59460f66934de9e32fda252e2f1028be36234e
+Merge: 7f0d590 0f500f6
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 28 08:57:10 2015 +0100
+
+    Merge branch 'master' of https://github.com/sgeyer-tgm/INSY05
+
+commit 7f0d590f61c05e351a7638d345af872b54b2f1ab
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 28 08:56:01 2015 +0100
+
+    test
+
+ src/main/java/at/erceggeyer/insy05/rm/RtfRMExporter.java | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit feb6ec142ba3427e996d65f657bbc1d8227943bf
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 28 08:45:29 2015 +0100
+
+    HTMLRmExporter works, but it doesnt show the reference table for fks
+
+ out.html  |   1 +
+ ~$out.rtf | Bin 0 -> 162 bytes
+ 2 files changed, 1 insertion(+)
+
+commit 2dcb58ad38bc4da98d8bf2cf6bff59c4f892ba4a
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 28 08:43:41 2015 +0100
+
+    HTMLRmExporter works, but it doesnt show the reference table for fks
+
+ insy05.iml                                         |    2 +
+ pom.xml                                            |    5 +
+ .../at/erceggeyer/insy05/rm/HtmlRmExporter.java    |   80 ++
+ .../java/at/erceggeyer/insy05/rm/RmExporter.java   |   11 +-
+ .../at/erceggeyer/insy05/rm/RtfRMExporter.java     |    6 +-
+ .../insy05/targets/RelationalModelTarget.java      |   22 +-
+ src/main/java/com/tutego/jrtf/RtfText.java         | 1431 ++++++++++----------
+ 7 files changed, 837 insertions(+), 720 deletions(-)
+
+commit 0f500f62a62de742fe20086976ed91526d0f7485
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Jan 21 11:10:40 2015 +0100
+
+    added handling when no password is given as argument
+
+ files/Erceg_Geyer_INSY_A05.docx                    | Bin 57868 -> 57931 bytes
+ .../erceggeyer/insy05/cli/CommandLineParser.java   |  25 +++++++++++++++++----
+ 2 files changed, 21 insertions(+), 4 deletions(-)
+
+commit 83e5fcaea5f74dfdc04a598db0aad0d592c3a8ef
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Jan 21 09:33:09 2015 +0100
+
+    implemented Command-Line-Parser and edited diagram
+
+ .gitignore                                         |  15 +-
+ files/Erceg_Geyer_INSY_A05.docx                    | Bin 57518 -> 57868 bytes
+ files/UML-Diagramm.asta                            | Bin 22013 -> 19848 bytes
+ files/~$ceg_Geyer_INSY_A05.docx                    | Bin 162 -> 0 bytes
+ src/main/java/at/erceggeyer/insy05/Main.java       | 100 ++++++------
+ .../erceggeyer/insy05/cli/CommandLineParser.java   | 179 +++++++++++++++++++++
+ src/main/java/at/erceggeyer/insy05/cli/Input.java  |  63 ++++++++
+ 7 files changed, 302 insertions(+), 55 deletions(-)
+
+commit b58fb7d064750bec22f78bbaffa91335e04461f5
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 21 08:49:51 2015 +0100
+
+    Added targets folder to index
+
+ .gitignore                                         |  1 +
+ src/main/java/at/erceggeyer/insy05/Main.java       |  4 +-
+ .../insy05/targets/RelationalModelTarget.java      | 49 +++++++++++++
+ .../at/sgeyer/insy04/exporting/Exportable.java     |  2 +-
+ .../exporting/target/TableContentTarget.java       | 82 ++++++++++++++++++++++
+ 5 files changed, 135 insertions(+), 3 deletions(-)
+
+commit 80a7a7d040091cea65f6455cdadeff667f502ecf
+Merge: baad0dc 9bc7202
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 21 08:39:32 2015 +0100
+
+    merge
+
+commit baad0dc30e7e3c2a2f55e19a3042c2766a8a8dca
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Wed Jan 21 08:36:14 2015 +0100
+
+    Initial commit
+
+ .gitignore                                         |   5 +
+ insy05.iml                                         |  22 +
+ pom.xml                                            | 181 +++++
+ src/main/java/at/erceggeyer/insy05/Main.java       |  49 ++
+ .../java/at/erceggeyer/insy05/rm/RmExporter.java   |  48 ++
+ .../at/erceggeyer/insy05/rm/RtfRMExporter.java     |  79 +++
+ src/main/java/at/sgeyer/insy04/dbms/DBMS.java      |  99 +++
+ .../java/at/sgeyer/insy04/dbms/DBMSException.java  |  21 +
+ .../java/at/sgeyer/insy04/dbms/DBMSFactory.java    |  44 ++
+ .../java/at/sgeyer/insy04/dbms/FilebasedDBMS.java  | 118 ++++
+ .../java/at/sgeyer/insy04/dbms/HostnameDBMS.java   | 103 +++
+ src/main/java/at/sgeyer/insy04/dbms/MySQL.java     |  50 ++
+ .../at/sgeyer/insy04/exporting/Exportable.java     |  20 +
+ .../java/at/sgeyer/insy04/exporting/Exporter.java  |  50 ++
+ .../java/at/sgeyer/insy04/io/ConsoleManager.java   |  24 +
+ src/main/java/at/sgeyer/insy04/io/FileManager.java |  31 +
+ src/main/java/at/sgeyer/insy04/io/IOManager.java   |  25 +
+ .../java/at/sgeyer/insy04/query/QueryBuilder.java  |  12 +
+ .../sgeyer/insy04/query/QueryBuilderException.java |  21 +
+ .../insy04/query/mysql/SelectQueryBuilder.java     | 473 +++++++++++++
+ src/main/java/com/tutego/jrtf/Rtf.java             | 468 +++++++++++++
+ src/main/java/com/tutego/jrtf/RtfDocfmt.java       | 282 ++++++++
+ src/main/java/com/tutego/jrtf/RtfException.java    |  75 ++
+ src/main/java/com/tutego/jrtf/RtfFields.java       | 111 +++
+ src/main/java/com/tutego/jrtf/RtfHeader.java       |  91 +++
+ src/main/java/com/tutego/jrtf/RtfHeaderColor.java  | 100 +++
+ src/main/java/com/tutego/jrtf/RtfHeaderFont.java   | 291 ++++++++
+ src/main/java/com/tutego/jrtf/RtfInfo.java         | 109 +++
+ src/main/java/com/tutego/jrtf/RtfPara.java         | 243 +++++++
+ src/main/java/com/tutego/jrtf/RtfPicture.java      | 266 +++++++
+ src/main/java/com/tutego/jrtf/RtfRow.java          | 183 +++++
+ .../jrtf/RtfSectionFormatAndHeaderFooter.java      | 280 ++++++++
+ src/main/java/com/tutego/jrtf/RtfTemplate.java     | 173 +++++
+ src/main/java/com/tutego/jrtf/RtfText.java         | 764 +++++++++++++++++++++
+ src/main/java/com/tutego/jrtf/RtfTextPara.java     | 643 +++++++++++++++++
+ src/main/java/com/tutego/jrtf/RtfUnit.java         |  57 ++
+ src/main/resources/log4j2.xml                      |  13 +
+ 37 files changed, 5624 insertions(+)
+
+commit 9bc7202c07900a6cecf4637d1d758165cfa9b892
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Jan 14 09:43:23 2015 +0100
+
+    began to design uml diagram
+
+ files/Erceg_Geyer_INSY_A05.docx | Bin 0 -> 57518 bytes
+ files/UML-Diagramm.asta         | Bin 0 -> 22013 bytes
+ files/~$ceg_Geyer_INSY_A05.docx | Bin 0 -> 162 bytes
+ pom.xml                         |   2 +-
+ 4 files changed, 1 insertion(+), 1 deletion(-)
+
+commit f4a8af56eed1fc142173da10b01c66a15c09d861
+Author: tgm-sgeyer <sgeyer@student.tgm.ac.at>
+Date:   Thu Dec 18 14:13:37 2014 +0100
+
+    Initial commit, empty project
+
+ .gitignore               |  3 +++
+ pom.xml                  | 12 ++++++++++++
+ src/main/java/empty      |  0
+ src/main/resources/empty |  0
+ src/test/java/empty      |  0
+ 5 files changed, 15 insertions(+)

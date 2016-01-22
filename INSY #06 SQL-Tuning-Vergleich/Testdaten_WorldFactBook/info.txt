@@ -1,0 +1,6 @@
+# Vorgehensweise des Imports
+pg_restore -U pgschueler -W -h vmdebian -d worldfactbook employees.sav
+
+# Einspielen des Backups
+pg_dump -U pgschueler -W -h vmdebian -d worldfactbook -c > backup.sql
+pgsql -U pgschueler -W -h vmdebian worldfactbook < backup.sql

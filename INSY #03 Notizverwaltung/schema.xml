@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="notizverwaltung" defaultIdMethod="native">
+	
+	<behavior name="timestampable" />
+	
+	<table name="projekt" phpName="Projekt">
+		<column name="projekt_id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+		<column name="name" type="varchar" size="100" required="true" phpName="projektname"/>
+		<column name="startdtm" type="date" required="true"/>
+		<column name="enddtm" type="date" required="false"/>
+		
+		<behavior name="validate">
+			<parameter name="rule1" value="{column: enddtm, validator: EqualTo, options: {value: startdtm}}" />
+		</behavior>
+	</table>
+	
+	
+	<table name="person" phpName="Person">
+		<column name="person_id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+		<column name="name" type="varchar" size="100" required="true"/>
+		<column name="beschr" type="clob" required="true"/>
+	</table>
+	
+	
+	<table name="notiz" phpName="Notiz">
+		<column name="notiz_id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+		<column name="betreff" type="varchar" size="100" required="true"/>
+		<column name="text" type="clob" required="true"/>
+		<column name="dtm" type="date" required="true" phpName="erstelldtm"/>
+		<column name="autor" type="integer" required="true"/>
+		<column name="projekt_id" type="integer" required="false"/>
+		
+		<behavior name="validate">
+			<parameter name="rule1" value="{column: betreff, validator: Length, options: {max: 100}}"/>
+		</behavior>
+		
+		<foreign-key foreignTable="projekt" phpName="Projekt">
+			<reference local="projekt_id" foreign="projekt_id"/>
+		</foreign-key>
+		
+		<foreign-key foreignTable="person" phpName="Person">
+			<reference local="autor" foreign="person_id"/>
+		</foreign-key>
+	</table>
+	
+	
+	<table name="projektteilnehmer" phpName="Projektteilnehmer" isCrossRef="true">
+		<column name="pers_id" type="integer" required="true" primaryKey="true"/>
+		<column name="projekt_id" type="integer" required="true" primaryKey="true"/>
+
+		<foreign-key foreignTable="person" phpName="Person">
+			<reference local="pers_id" foreign="person_id"/>
+		</foreign-key>
+		
+		<foreign-key foreignTable="projekt" phpName="Projekt">
+			<reference local="projekt_id" foreign="projekt_id"/>
+		</foreign-key>
+	</table>
+	
+	
+	<table name="todonotiz" phpName="ToDoNotiz">
+
+		<column name="status" type="enum" valueSet="ERLEDIGT, OFFEN, IN ARBEIT" required="true" />
+		<column name="prioritaet" type="enum" valueSet="LOW, NORMAL, HIGH" required="true"/>
+		
+		<behavior name="concrete_inheritance">
+			<parameter name="extends" value="notiz" />
+		</behavior>
+
+	</table>
+	
+	
+	<table name="rezept" phpName="Rezept">
+		
+		<column name="rezeptschritte" type="array" required="true" />
+		
+		<behavior name="concrete_inheritance">
+			<parameter name="extends" value="notiz" />
+		</behavior>
+		
+    </table>
+	
+</database>
