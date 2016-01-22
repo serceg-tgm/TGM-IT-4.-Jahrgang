@@ -1,0 +1,28 @@
+commit c07fff06b05954b15ae675fd3ef1727d7b7152ab
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Dec 10 20:50:07 2014 +0100
+
+    IndInf06: added c-file and pdf-file
+
+ IndInf06/Erceg_Stefan_INDINF06.docx | Bin 284617 -> 286643 bytes
+ IndInf06/Erceg_Stefan_INDINF06.pdf  | Bin 0 -> 971446 bytes
+ IndInf06/erceg_indinf06.c           | 104 ++++++++++++++++++++++++++++++++++++
+ 3 files changed, 104 insertions(+)
+
+commit 3e71867f82019879ef368fbf7b84a01b4b9a8cdc
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Dec 10 20:33:51 2014 +0100
+
+    IndInf06: finished protocol
+
+ IndInf06/Erceg_Stefan_INDINF06.docx | Bin 56566 -> 284617 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a95b6c2608ea1bd546c7ed95eeed387200b8aba5
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Dec 4 21:44:37 2014 +0100
+
+    IndInf06: wrote steps for installations and configurations for the microcontroller in protocol
+
+ IndInf06/Erceg_Stefan_INDINF06.docx | Bin 0 -> 56566 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)

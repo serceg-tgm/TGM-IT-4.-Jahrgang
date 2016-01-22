@@ -1,0 +1,117 @@
+commit 44265829c25da32c1ae75f7dd04ab1a9a09c9b8f
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Jun 18 19:41:26 2015 +0200
+
+    IndInf09: fixed error at stm32f30x_it.c file
+
+ IndInf09/indinf09/build/main                       | Bin 113499 -> 128762 bytes
+ IndInf09/indinf09/build/main.bin                   | Bin 1856 -> 2824 bytes
+ IndInf09/indinf09/build/main.d                     |  12 +++---
+ IndInf09/indinf09/build/main.o                     | Bin 8020 -> 9900 bytes
+ IndInf09/indinf09/build/stm32f30x_it.d             |  12 +++---
+ IndInf09/indinf09/build/stm32f30x_it.o             | Bin 6660 -> 8016 bytes
+ IndInf09/indinf09/build/stm32f3_discovery.d        |  12 +++---
+ IndInf09/indinf09/build/stm32f3_discovery.o        | Bin 14384 -> 14052 bytes
+ IndInf09/indinf09/build/system_stm32f30x.d         |  14 +++---
+ IndInf09/indinf09/build/system_stm32f30x.o         | Bin 6940 -> 6796 bytes
+ IndInf09/indinf09/lib/libstm32_f3.a                | Bin 457628 -> 596270 bytes
+ .../indinf09/lib/spl_build/stm32f3_discovery.d     |  37 ++++++++++++++++
+ .../indinf09/lib/spl_build/stm32f3_discovery.o     | Bin 0 -> 14116 bytes
+ .../lib/spl_build/stm32f3_discovery_l3gd20.d       |  37 ++++++++++++++++
+ .../lib/spl_build/stm32f3_discovery_l3gd20.o       | Bin 0 -> 17460 bytes
+ .../lib/spl_build/stm32f3_discovery_lsm303dlhc.d   |  37 ++++++++++++++++
+ .../lib/spl_build/stm32f3_discovery_lsm303dlhc.o   | Bin 0 -> 22760 bytes
+ IndInf09/indinf09/lib/spl_build/usb_core.d         |  48 +++++++++++++++++++++
+ IndInf09/indinf09/lib/spl_build/usb_core.o         | Bin 0 -> 25260 bytes
+ IndInf09/indinf09/lib/spl_build/usb_init.d         |  48 +++++++++++++++++++++
+ IndInf09/indinf09/lib/spl_build/usb_init.o         | Bin 0 -> 6268 bytes
+ IndInf09/indinf09/lib/spl_build/usb_int.d          |  48 +++++++++++++++++++++
+ IndInf09/indinf09/lib/spl_build/usb_int.o          | Bin 0 -> 5712 bytes
+ IndInf09/indinf09/lib/spl_build/usb_mem.d          |  48 +++++++++++++++++++++
+ IndInf09/indinf09/lib/spl_build/usb_mem.o          | Bin 0 -> 5544 bytes
+ IndInf09/indinf09/lib/spl_build/usb_regs.d         |  48 +++++++++++++++++++++
+ IndInf09/indinf09/lib/spl_build/usb_regs.o         | Bin 0 -> 32232 bytes
+ IndInf09/indinf09/lib/spl_build/usb_sil.d          |  48 +++++++++++++++++++++
+ IndInf09/indinf09/lib/spl_build/usb_sil.o          | Bin 0 -> 5952 bytes
+ IndInf09/indinf09/stm32f30x_it.c                   |   3 +-
+ 30 files changed, 421 insertions(+), 31 deletions(-)
+
+commit dca99774d5bf229515c3d83faada50b202f8c4a2
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Jun 18 19:00:35 2015 +0200
+
+    IndInf09: implemented program and wrote protocol
+
+ IndInf09/Erceg_Stefan_INDINF09.docx                | Bin 0 -> 59134 bytes
+ IndInf09/Erceg_Stefan_INDINF09.pdf                 | Bin 0 -> 606910 bytes
+ IndInf09/indinf09/Makefile                         | 151 +++++++
+ IndInf09/indinf09/build/main                       | Bin 0 -> 113499 bytes
+ IndInf09/indinf09/build/main.bin                   | Bin 0 -> 1856 bytes
+ IndInf09/indinf09/build/main.d                     |  40 ++
+ IndInf09/indinf09/build/main.o                     | Bin 0 -> 8020 bytes
+ IndInf09/indinf09/build/startup_stm32f30x.o        | Bin 0 -> 6432 bytes
+ IndInf09/indinf09/build/stm32f30x_it.d             |  40 ++
+ IndInf09/indinf09/build/stm32f30x_it.o             | Bin 0 -> 6660 bytes
+ IndInf09/indinf09/build/stm32f3_discovery.d        |  39 ++
+ IndInf09/indinf09/build/stm32f3_discovery.o        | Bin 0 -> 14384 bytes
+ IndInf09/indinf09/build/system_stm32f30x.d         |  37 ++
+ IndInf09/indinf09/build/system_stm32f30x.o         | Bin 0 -> 6940 bytes
+ IndInf09/indinf09/config/debug.cfg                 |   5 +
+ IndInf09/indinf09/config/openocd.cfg               |  10 +
+ IndInf09/indinf09/default/STM32_FLASH.ld           | 170 ++++++++
+ IndInf09/indinf09/default/startup_stm32f30x.s      | 465 +++++++++++++++++++++
+ IndInf09/indinf09/default/stm32f3_discovery.c      | 275 ++++++++++++
+ IndInf09/indinf09/default/stm32f3_discovery.h      | 185 ++++++++
+ IndInf09/indinf09/default/system_stm32f30x.c       | 407 ++++++++++++++++++
+ IndInf09/indinf09/lib/libstm32_f3.a                | Bin 0 -> 457628 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_adc.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_adc.o    | Bin 0 -> 43992 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_can.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_can.o    | Bin 0 -> 23864 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_comp.d   |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_comp.o   | Bin 0 -> 7440 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_crc.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_crc.o    | Bin 0 -> 9628 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_dac.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_dac.o    | Bin 0 -> 14840 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_dbgmcu.d |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_dbgmcu.o | Bin 0 -> 5468 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_dma.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_dma.o    | Bin 0 -> 10000 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_exti.d   |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_exti.o   | Bin 0 -> 8952 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_flash.d  |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_flash.o  | Bin 0 -> 24080 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_gpio.d   |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_gpio.o   | Bin 0 -> 12220 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_i2c.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_i2c.o    | Bin 0 -> 26752 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_iwdg.d   |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_iwdg.o   | Bin 0 -> 5964 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_misc.d   |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_misc.o   | Bin 0 -> 8084 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_opamp.d  |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_opamp.o  | Bin 0 -> 11480 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_pwr.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_pwr.o    | Bin 0 -> 9484 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_rcc.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_rcc.o    | Bin 0 -> 26996 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_rtc.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_rtc.o    | Bin 0 -> 42068 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_spi.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_spi.o    | Bin 0 -> 24452 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_syscfg.d |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_syscfg.o | Bin 0 -> 10704 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_tim.d    |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_tim.o    | Bin 0 -> 76028 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_usart.d  |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_usart.o  | Bin 0 -> 32960 bytes
+ IndInf09/indinf09/lib/spl_build/stm32f30x_wwdg.d   |  38 ++
+ IndInf09/indinf09/lib/spl_build/stm32f30x_wwdg.o   | Bin 0 -> 7304 bytes
+ IndInf09/indinf09/main.c                           | 211 ++++++++++
+ IndInf09/indinf09/main.h                           |  46 ++
+ IndInf09/indinf09/stm32f30x_conf.h                 |  82 ++++
+ IndInf09/indinf09/stm32f30x_it.c                   | 207 +++++++++
+ IndInf09/indinf09/stm32f30x_it.h                   |  60 +++
+ IndInf09/~$ceg_Stefan_INDINF09.docx                | Bin 0 -> 162 bytes
+ 72 files changed, 3266 insertions(+)

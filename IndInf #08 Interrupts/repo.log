@@ -1,0 +1,87 @@
+commit 5eb404e183ac29ab2ce023e66cdeec3cb22fcdb8
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Jan 18 20:48:57 2015 +0100
+
+    IndInf08: implemented program and finished protocol
+
+ IndInf08/Erceg_Stefan_INDINF08.docx                | Bin 270977 -> 272906 bytes
+ IndInf08/Erceg_Stefan_INDINF08.pdf                 | Bin 0 -> 834162 bytes
+ IndInf08/indinf08/Makefile                         | 142 +++++++
+ IndInf08/indinf08/build/main                       | Bin 0 -> 113499 bytes
+ IndInf08/indinf08/build/main.bin                   | Bin 0 -> 1856 bytes
+ IndInf08/indinf08/build/main.d                     |  40 ++
+ IndInf08/indinf08/build/main.o                     | Bin 0 -> 8020 bytes
+ IndInf08/indinf08/build/startup_stm32f30x.o        | Bin 0 -> 6432 bytes
+ IndInf08/indinf08/build/stm32f30x_it.d             |  40 ++
+ IndInf08/indinf08/build/stm32f30x_it.o             | Bin 0 -> 6660 bytes
+ IndInf08/indinf08/build/stm32f3_discovery.d        |  39 ++
+ IndInf08/indinf08/build/stm32f3_discovery.o        | Bin 0 -> 14384 bytes
+ IndInf08/indinf08/build/system_stm32f30x.d         |  37 ++
+ IndInf08/indinf08/build/system_stm32f30x.o         | Bin 0 -> 6940 bytes
+ IndInf08/indinf08/config/debug.cfg                 |   5 +
+ IndInf08/indinf08/config/openocd.cfg               |  10 +
+ IndInf08/indinf08/default/STM32_FLASH.ld           | 170 ++++++++
+ IndInf08/indinf08/default/startup_stm32f30x.s      | 465 +++++++++++++++++++++
+ IndInf08/indinf08/default/stm32f3_discovery.c      | 275 ++++++++++++
+ IndInf08/indinf08/default/stm32f3_discovery.h      | 185 ++++++++
+ IndInf08/indinf08/lib/libstm32_f3.a                | Bin 0 -> 457628 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_adc.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_adc.o    | Bin 0 -> 43992 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_can.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_can.o    | Bin 0 -> 23864 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_comp.d   |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_comp.o   | Bin 0 -> 7440 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_crc.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_crc.o    | Bin 0 -> 9628 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_dac.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_dac.o    | Bin 0 -> 14840 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_dbgmcu.d |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_dbgmcu.o | Bin 0 -> 5468 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_dma.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_dma.o    | Bin 0 -> 10000 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_exti.d   |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_exti.o   | Bin 0 -> 8952 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_flash.d  |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_flash.o  | Bin 0 -> 24080 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_gpio.d   |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_gpio.o   | Bin 0 -> 12220 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_i2c.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_i2c.o    | Bin 0 -> 26752 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_iwdg.d   |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_iwdg.o   | Bin 0 -> 5964 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_misc.d   |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_misc.o   | Bin 0 -> 8084 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_opamp.d  |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_opamp.o  | Bin 0 -> 11480 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_pwr.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_pwr.o    | Bin 0 -> 9484 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_rcc.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_rcc.o    | Bin 0 -> 26996 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_rtc.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_rtc.o    | Bin 0 -> 42068 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_spi.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_spi.o    | Bin 0 -> 24452 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_syscfg.d |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_syscfg.o | Bin 0 -> 10704 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_tim.d    |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_tim.o    | Bin 0 -> 76028 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_usart.d  |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_usart.o  | Bin 0 -> 32960 bytes
+ IndInf08/indinf08/lib/spl_build/stm32f30x_wwdg.d   |  38 ++
+ IndInf08/indinf08/lib/spl_build/stm32f30x_wwdg.o   | Bin 0 -> 7304 bytes
+ IndInf08/indinf08/main.c                           | 150 +++++++
+ IndInf08/indinf08/main.h                           |  46 ++
+ IndInf08/indinf08/stm32f30x_conf.h                 |  82 ++++
+ IndInf08/indinf08/stm32f30x_it.c                   | 189 +++++++++
+ IndInf08/indinf08/stm32f30x_it.h                   |  60 +++
+ IndInf08/indinf08/system_stm32f30x.c               | 407 ++++++++++++++++++
+ 71 files changed, 3178 insertions(+)
+
+commit 3869b52e8150c6c988bc64ed2ab7b326a0698165
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Jan 18 16:41:18 2015 +0100
+
+    IndInf08: began to write protocol
+
+ IndInf08/Erceg_Stefan_INDINF08.docx | Bin 0 -> 270977 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)

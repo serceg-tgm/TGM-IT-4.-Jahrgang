@@ -1,0 +1,23 @@
+commit a0658a6b8f808860926bdbfb80ef218bc0513869
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Dec 11 22:27:54 2014 +0100
+
+    IndInf07: finished protocol
+
+ IndInf07/Erceg_Stefan_INDINF07.docx | Bin 273973 -> 275252 bytes
+ IndInf07/Erceg_Stefan_INDINF07.pdf  | Bin 0 -> 858112 bytes
+ IndInf07/erceg_indinf07.c           |   2 +-
+ 3 files changed, 1 insertion(+), 1 deletion(-)
+
+commit e699c1a6f2e7399f4cfdbbce1b55e915728e0ca3
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Thu Dec 11 21:46:52 2014 +0100
+
+    IndInf07: implemented program
+
+ IndInf07/Erceg_Stefan_INDINF07.docx | Bin 0 -> 273973 bytes
+ IndInf07/erceg_indinf07.c           |  98 ++++++++++++++++++++++++++++++++++++
+ IndInf07/~$ceg_Stefan_INDINF06.docx | Bin 0 -> 162 bytes
+ IndInf07/~$ceg_Stefan_INDINF07.docx | Bin 0 -> 162 bytes
+ 4 files changed, 98 insertions(+)
+
