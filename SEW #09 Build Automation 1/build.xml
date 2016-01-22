@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Name of file  : build.xml
+	Author        : Stefan Erceg <serceg@student.tgm.ac.at>
+	Version       : 20150115
+	Created       : 20150108
+	Description   : doing some exercises with the build tool Phing
+-->
+
+<project name="S07" default="main" basedir=".">
+
+    <property name="msg" value="Hello World"/>
+	<property file="build.properties"/>
+	
+    <target name="hello">
+        <echo msg="${msg}" />
+    </target>
+
+	<target name="version" depends="hello">
+		<echo message="The property version is ${version}"/>
+	</target>
+	
+    <fileset dir="./src/" id="php">
+        <include name="*.php"/>
+    </fileset>
+
+    <target name="mod">
+		<echo message="All line-endings in the php-files are changed from win to unix"/>
+		<reflexive>
+            <fileset refid="php" />
+            <filterchain>
+                <replaceregexp>
+					<regexp pattern="\r\n" replace="${line.separator}"/>
+					<regexp pattern="\r" replace="${line.separator}"/>
+              </replaceregexp>
+            </filterchain>
+        </reflexive>
+    </target>
+
+    <target name="copy" depends="mod">
+        <echo message="Php files are copied to ${username}@${hostname}:/var/www/${phing.project.name}/${version}/"/>
+        <scp username="${username}" password="${password}" host="${hostname}" port="${port}"
+             todir="/var/www/${phing.project.name}/${version}/" autocreate="true">
+            <fileset refid="php" />
+        </scp>
+    </target>
+
+    <target name="main" depends="version, copy" />
+
+</project>

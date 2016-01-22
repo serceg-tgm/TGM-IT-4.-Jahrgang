@@ -1,0 +1,223 @@
+commit 8cf1b8828057a825657b81afe35952192b8700e3
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Nov 12 21:40:03 2014 +0100
+
+    S03: generated JAR-file
+
+ "S03/Ben\303\266tigte Files/Aufgabenstellung.png"  | Bin 0 -> 84606 bytes
+ "S03/Ben\303\266tigte Files/Erceg_Stefan_S03.asta" | Bin 0 -> 21138 bytes
+ "S03/Ben\303\266tigte Files/Erceg_Stefan_S03.docx" | Bin 0 -> 237207 bytes
+ "S03/Ben\303\266tigte Files/Erceg_Stefan_S03.pdf"  | Bin 0 -> 724327 bytes
+ "S03/Ben\303\266tigte Files/UML-Calculator.png"    | Bin 0 -> 90410 bytes
+ .../at/stefanerceg/s03/AdditionCalculator.java"    |  34 +++
+ .../src/at/stefanerceg/s03/Calculateable.java"     |  29 ++
+ .../src/at/stefanerceg/s03/Calculator.java"        | 128 +++++++++
+ .../at/stefanerceg/s03/DivisionCalculator.java"    |  34 +++
+ .../stefanerceg/s03/MultiplicationCalculator.java" |  34 +++
+ .../at/stefanerceg/s03/SubtractionCalculator.java" |  34 +++
+ .../at/stefanerceg/s03/testen/TestCalculator.java" | 136 ++++++++++
+ .../s03/testen/TestOperationtypes.java"            | 292 +++++++++++++++++++++
+ .../src/at/stefanerceg/s03/testen/TestRunner.java" |  37 +++
+ S03/Erceg_Stefan_S03.jar                           | Bin 0 -> 772701 bytes
+ 15 files changed, 758 insertions(+)
+
+commit 96bffe7ec0c34ab1478848cf10b66b54deea724a
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Nov 12 21:38:25 2014 +0100
+
+    S03: finished protocol
+
+ S03/Aufgabenstellung.png                           | Bin 84606 -> 0 bytes
+ S03/Erceg_Stefan_S03.asta                          | Bin 20629 -> 0 bytes
+ S03/Erceg_Stefan_S03.docx                          | Bin 139463 -> 0 bytes
+ S03/UML-Calculator.png                             | Bin 86035 -> 0 bytes
+ S03/src/at/stefanerceg/s03/AdditionCalculator.java |  34 ---
+ S03/src/at/stefanerceg/s03/Calculateable.java      |  29 --
+ S03/src/at/stefanerceg/s03/Calculator.java         | 128 ---------
+ S03/src/at/stefanerceg/s03/DivisionCalculator.java |  34 ---
+ .../stefanerceg/s03/MultiplicationCalculator.java  |  34 ---
+ .../at/stefanerceg/s03/SubstractionCalculator.java |  29 --
+ .../at/stefanerceg/s03/SubtractionCalculator.java  |  34 ---
+ .../at/stefanerceg/s03/testen/TestCalculator.java  | 136 ----------
+ .../stefanerceg/s03/testen/TestOperationtypes.java | 292 ---------------------
+ S03/src/at/stefanerceg/s03/testen/TestRunner.java  |  37 ---
+ 14 files changed, 787 deletions(-)
+
+commit 498e87217ca2168dd70466c7476a894b3aef7fa3
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Nov 12 20:26:08 2014 +0100
+
+    S03: add testclasses
+
+ S03/src/at/stefanerceg/s03/AdditionCalculator.java |   9 +-
+ S03/src/at/stefanerceg/s03/Calculateable.java      |   2 +-
+ S03/src/at/stefanerceg/s03/Calculator.java         |  10 +-
+ S03/src/at/stefanerceg/s03/DivisionCalculator.java |  13 +-
+ .../stefanerceg/s03/MultiplicationCalculator.java  |  13 +-
+ .../at/stefanerceg/s03/SubtractionCalculator.java  |  34 +++
+ .../at/stefanerceg/s03/testen/TestCalculator.java  | 126 ++++++++-
+ .../stefanerceg/s03/testen/TestOperationtypes.java | 292 +++++++++++++++++++++
+ S03/src/at/stefanerceg/s03/testen/TestRunner.java  |  37 +++
+ 9 files changed, 519 insertions(+), 17 deletions(-)
+
+commit 149e48dd3a27f6cd69c470ea3061b6708eaf6f13
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Nov 12 18:03:02 2014 +0100
+
+    S03: implemented classes
+
+ S03/src/at/stefanerceg/s03/AdditionCalculator.java | 28 ++++++-
+ S03/src/at/stefanerceg/s03/Calculateable.java      | 24 +++++-
+ S03/src/at/stefanerceg/s03/Calculator.java         | 97 ++++++++++++++++++++--
+ S03/src/at/stefanerceg/s03/DivisionCalculator.java | 24 +++++-
+ .../stefanerceg/s03/MultiplicationCalculator.java  | 24 +++++-
+ .../at/stefanerceg/s03/SubstractionCalculator.java | 24 +++++-
+ .../at/stefanerceg/s03/testen/TestCalculator.java  | 14 ++++
+ 7 files changed, 216 insertions(+), 19 deletions(-)
+
+commit 0c92a1d0d942bc8b083c2cc7728cfe3e0c4d0b35
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Nov 12 15:59:31 2014 +0100
+
+    S03: generated Java files
+
+ S03/src/at/stefanerceg/s03/AdditionCalculator.java |  9 +++++
+ S03/src/at/stefanerceg/s03/Calculateable.java      |  7 ++++
+ S03/src/at/stefanerceg/s03/Calculator.java         | 45 ++++++++++++++++++++++
+ S03/src/at/stefanerceg/s03/DivisionCalculator.java |  9 +++++
+ .../stefanerceg/s03/MultiplicationCalculator.java  |  9 +++++
+ .../at/stefanerceg/s03/SubstractionCalculator.java |  9 +++++
+ 6 files changed, 88 insertions(+)
+
+commit b0819b751721e30d9b82b9c46adeb798e0d5fa60
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Nov 12 15:46:19 2014 +0100
+
+    S03: add Designueberlegung to protocol
+
+ S03/Aufgabenstellung.png  | Bin 0 -> 84606 bytes
+ S03/Erceg_Stefan_S03.asta | Bin 0 -> 20629 bytes
+ S03/Erceg_Stefan_S03.docx | Bin 0 -> 139463 bytes
+ S03/UML-Calculator.png    | Bin 0 -> 86035 bytes
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6aea51f928db8a6627787fe77f6acc9a9ca32125
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Tue Nov 11 18:49:23 2014 +0100
+
+    S03: updated & finished UML
+
+ S03/Erceg_S03.asta | Bin 20120 -> 20054 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0b4cda88646b67a8a816f9be860c361fce4ba601
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Mon Nov 10 19:53:47 2014 +0100
+
+    S03: added an interface in UML
+
+ S03/Erceg_S03.asta | Bin 0 -> 20120 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 21114c94db6abe0cf95445772311b3932c3f5646
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Fri Oct 31 13:34:31 2014 +0100
+
+    S01: add S01 - Collections in Java
+
+ S01/Erceg_Stefan_S01.pdf | Bin 0 -> 777203 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 775a6e19404d9a3e1b0a5b4d1870689d49b02e61
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Oct 15 22:29:46 2014 +0200
+
+    S02: delete duplicated file
+
+ erceg_s02.jar | Bin 94602 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f909f0e0f1b64f39a1bdd217955ae04c7cee35e1
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Oct 15 22:24:58 2014 +0200
+
+    S02: add JAR-file from S02
+
+ S02/erceg_s02.jar | Bin 0 -> 94602 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b69ad985a98de5091b61f67b354c446264d7c825
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Wed Oct 15 22:09:02 2014 +0200
+
+    S02: add S02
+
+ S02/.classpath                                     |   6 +
+ S02/.project                                       |  17 +
+ S02/.settings/org.eclipse.jdt.core.prefs           |  11 +
+ S02/bin/at/stefanerceg/s02/Main.class              | Bin 0 -> 2766 bytes
+ S02/bin/at/stefanerceg/s02/generics/Wrapper.class  | Bin 0 -> 1091 bytes
+ S02/bin/at/stefanerceg/s02/konto/Girokonto.class   | Bin 0 -> 1181 bytes
+ S02/bin/at/stefanerceg/s02/konto/Konto.class       | Bin 0 -> 963 bytes
+ .../s02/konto/Losungswortsparkonto.class           | Bin 0 -> 989 bytes
+ .../s02/konto/NotEnoughMoneyException.class        | Bin 0 -> 538 bytes
+ S02/bin/at/stefanerceg/s02/konto/Sparkonto.class   | Bin 0 -> 1018 bytes
+ S02/doc/allclasses-frame.html                      |  25 +
+ S02/doc/allclasses-noframe.html                    |  25 +
+ S02/doc/at/stefanerceg/s02/Main.html               | 479 +++++++++++++++++
+ S02/doc/at/stefanerceg/s02/class-use/Main.html     | 124 +++++
+ S02/doc/at/stefanerceg/s02/generics/Wrapper.html   | 341 ++++++++++++
+ .../s02/generics/class-use/Wrapper.html            | 124 +++++
+ .../at/stefanerceg/s02/generics/package-frame.html |  20 +
+ .../stefanerceg/s02/generics/package-summary.html  | 144 ++++++
+ .../at/stefanerceg/s02/generics/package-tree.html  | 137 +++++
+ .../at/stefanerceg/s02/generics/package-use.html   | 124 +++++
+ S02/doc/at/stefanerceg/s02/konto/Girokonto.html    | 353 +++++++++++++
+ S02/doc/at/stefanerceg/s02/konto/Konto.html        | 348 +++++++++++++
+ .../s02/konto/Losungswortsparkonto.html            | 335 ++++++++++++
+ .../s02/konto/NotEnoughMoneyException.html         | 312 +++++++++++
+ S02/doc/at/stefanerceg/s02/konto/Sparkonto.html    | 346 +++++++++++++
+ .../stefanerceg/s02/konto/class-use/Girokonto.html | 167 ++++++
+ .../at/stefanerceg/s02/konto/class-use/Konto.html  | 178 +++++++
+ .../s02/konto/class-use/Losungswortsparkonto.html  | 124 +++++
+ .../konto/class-use/NotEnoughMoneyException.html   | 211 ++++++++
+ .../stefanerceg/s02/konto/class-use/Sparkonto.html | 166 ++++++
+ .../at/stefanerceg/s02/konto/package-frame.html    |  27 +
+ .../at/stefanerceg/s02/konto/package-summary.html  | 179 +++++++
+ S02/doc/at/stefanerceg/s02/konto/package-tree.html | 155 ++++++
+ S02/doc/at/stefanerceg/s02/konto/package-use.html  | 195 +++++++
+ S02/doc/at/stefanerceg/s02/package-frame.html      |  20 +
+ S02/doc/at/stefanerceg/s02/package-summary.html    | 144 ++++++
+ S02/doc/at/stefanerceg/s02/package-tree.html       | 137 +++++
+ S02/doc/at/stefanerceg/s02/package-use.html        | 124 +++++
+ S02/doc/constant-values.html                       | 124 +++++
+ S02/doc/deprecated-list.html                       | 124 +++++
+ S02/doc/help-doc.html                              | 229 ++++++++
+ S02/doc/index-files/index-1.html                   | 145 ++++++
+ S02/doc/index-files/index-10.html                  | 131 +++++
+ S02/doc/index-files/index-11.html                  | 135 +++++
+ S02/doc/index-files/index-2.html                   | 147 ++++++
+ S02/doc/index-files/index-3.html                   | 160 ++++++
+ S02/doc/index-files/index-4.html                   | 136 +++++
+ S02/doc/index-files/index-5.html                   | 144 ++++++
+ S02/doc/index-files/index-6.html                   | 137 +++++
+ S02/doc/index-files/index-7.html                   | 133 +++++
+ S02/doc/index-files/index-8.html                   | 140 +++++
+ S02/doc/index-files/index-9.html                   | 131 +++++
+ S02/doc/index.html                                 |  74 +++
+ S02/doc/overview-frame.html                        |  23 +
+ S02/doc/overview-summary.html                      | 143 +++++
+ S02/doc/overview-tree.html                         | 159 ++++++
+ S02/doc/package-list                               |   3 +
+ S02/doc/script.js                                  |  30 ++
+ S02/doc/serialized-form.html                       | 141 +++++
+ S02/doc/stylesheet.css                             | 574 +++++++++++++++++++++
+ S02/src/at/stefanerceg/s02/Main.java               | 178 +++++++
+ S02/src/at/stefanerceg/s02/generics/Wrapper.java   |  53 ++
+ S02/src/at/stefanerceg/s02/konto/Girokonto.java    |  71 +++
+ S02/src/at/stefanerceg/s02/konto/Konto.java        |  71 +++
+ .../s02/konto/Losungswortsparkonto.java            |  56 ++
+ .../s02/konto/NotEnoughMoneyException.java         |  27 +
+ S02/src/at/stefanerceg/s02/konto/Sparkonto.java    |  62 +++
+ erceg_s02.jar                                      | Bin 0 -> 94602 bytes
+ 68 files changed, 8779 insertions(+)

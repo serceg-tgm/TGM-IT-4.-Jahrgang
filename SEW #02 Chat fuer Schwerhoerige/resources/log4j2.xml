@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+        <PatternLayout pattern="[%d{ss:SSS} %-6level{TRACE=TRACE],DEBUG=DEBUG],INFO=INFO],WARN=WARN],ERROR=ERROR],FATAL=FATAL]} [%logger{1}|%t]: %msg%n" />
+    </Console>
+    <!--<File name="File" fileName="${sys:robotfactory.log.path}">
+        <PatternLayout pattern="[%d{ss:SSS} %-6level{TRACE=TRACE],DEBUG=DEBUG],INFO=INFO],WARN=WARN],ERROR=ERROR],FATAL=FATAL]} [%logger{1}|%t]: %msg%n" />
+    </File>-->
+</Appenders>
+<Loggers>
+    <Logger name="tgm.sew" level="info" additivity="false">
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref="File" />
+    </Logger>
+    <Root level="warn">
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref="File" />
+    </Root>
+</Loggers>
+</Configuration>

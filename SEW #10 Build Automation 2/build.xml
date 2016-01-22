@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Name of file  : build.xml
+	Author        : Stefan Erceg <serceg@student.tgm.ac.at>
+	Version       : 20150121
+	Created       : 20150115
+	Description   : extension of S07 (doing some exercises with the build tool Phing)
+-->
+
+<project name="S08" default="main" basedir=".">
+
+    <property name="msg" value="Hello World"/>
+	<property file="build.properties"/>
+	
+    <target name="hello">
+        <echo msg="${msg}" />
+    </target>
+
+	<target name="version" depends="hello">
+		<echo message="The property version is ${version}"/>
+	</target>
+	
+    <fileset dir="./src" id="php">
+        <include name="*.php"/>
+    </fileset>
+
+    <target name="mod">
+		<echo message="All line-endings in the php-files are changed from win to unix"/>
+		<reflexive>
+            <fileset refid="php" />
+            <filterchain>
+                <replaceregexp>
+					<regexp pattern="\r\n" replace="${line.separator}"/>
+					<regexp pattern="\r" replace="${line.separator}"/>
+              </replaceregexp>
+            </filterchain>
+        </reflexive>
+    </target>
+
+    <target name="copy" depends="mod">
+        <echo message="Php files are copied to ${username}@${hostname}:/var/www/${phing.project.name}/${version}/"/>
+        <scp username="${username}" password="${password}" host="${hostname}" port="${port}"
+             todir="/var/www/${phing.project.name}/${version}/" autocreate="true">
+            <fileset refid="php" />
+        </scp>
+    </target>
+
+	<target name="test">
+		<mkdir dir="./report"/>
+		<phpunit haltonfailure="true" printsummary="true" pharlocation="${pharlocation}">
+			<batchtest>
+				<fileset dir="./src" id="test">
+					<include name="test.php"/>
+				</fileset>
+			</batchtest>
+
+			<formatter type="xml" todir="./report" outfile="logfile.xml"/>
+		</phpunit>
+		
+		<phpunitreport infile="report/logfile.xml" styledir="${pharlocation}" format="frames" todir="report"/>
+	</target>
+	
+	<target name="db">
+        <pdosqlexec url="mysql:host=${dbhostname};dbname=${dbname}" userid="${dbuser}" password="${dbpassword}" src="./src/create_and_insert.sql"/>
+		<echo message="A table was added to the database ${dbname} and some datarows were inserted into the table"/>
+    </target>
+
+	<target name="mail" depends="version,test,db">
+		<mail from="${sender}" tolist="${receivers}" subject="Build finished!" message="Build successfully finished" />
+	</target>
+	
+    <target name="main" depends="mail" />
+	
+</project>

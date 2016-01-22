@@ -1,0 +1,71 @@
+commit a23198c0fc10b329ffccfb07f811ea439438b798
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Nov 30 21:48:20 2014 +0100
+
+    S04: finished protocol
+
+ S04/Erceg_Stefan_S04.docx                          | Bin 57526 -> 442221 bytes
+ S04/Erceg_Stefan_S04.pdf                           | Bin 0 -> 935931 bytes
+ S04/PHP-Files/Main.php                             |   3 ++-
+ .../Testfall (1).JPG"                              | Bin 0 -> 46808 bytes
+ .../Testfall (2).JPG"                              | Bin 0 -> 40674 bytes
+ .../Testfall (3).JPG"                              | Bin 0 -> 67214 bytes
+ .../Testfall (4).JPG"                              | Bin 0 -> 54177 bytes
+ .../Testfall (5).JPG"                              | Bin 0 -> 39194 bytes
+ .../Testfall (6).JPG"                              | Bin 0 -> 71122 bytes
+ .../Testfall (7).JPG"                              | Bin 0 -> 41215 bytes
+ 10 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 90d8437f0472b5b6d2290a85ba7f7df03e046343
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Nov 30 20:20:01 2014 +0100
+
+    S04: implemented all classes
+
+ S04/PHP-Files/Element.php       |  12 ++--
+ S04/PHP-Files/Factory.php       |   6 +-
+ S04/PHP-Files/Main.php          | 135 +++++++++++++++++++++++++++++++++++++---
+ S04/PHP-Files/XMLAdapter.php    |  31 +++++++--
+ S04/PHP-Files/XMLClassname.php  |  32 ++++++++--
+ S04/PHP-Files/XMLFactory.php    |  47 +++++++-------
+ S04/PHP-Files/XMLPassword.php   |  32 ++++++++--
+ S04/PHP-Files/XMLUser.php       |  32 ++++++++--
+ S04/PHP-Files/YamlAdapter.php   |  31 +++++++--
+ S04/PHP-Files/YamlClassname.php |  32 ++++++++--
+ S04/PHP-Files/YamlFactory.php   |  47 +++++++-------
+ S04/PHP-Files/YamlPassword.php  |  31 +++++++--
+ S04/PHP-Files/YamlUser.php      |  33 ++++++++--
+ S04/UML-Diagramm.png            | Bin 0 -> 17858 bytes
+ 14 files changed, 402 insertions(+), 99 deletions(-)
+
+commit f0a3607f927db8b9ebd894447ff4a859404f6a08
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Nov 30 15:32:34 2014 +0100
+
+    S04: generated php-classes and main-file
+
+ S04/Erceg_Stefan_S04.docx       | Bin 57408 -> 57526 bytes
+ S04/PHP-Files/Element.php       |  11 +++++++++++
+ S04/PHP-Files/Factory.php       |  11 +++++++++++
+ S04/PHP-Files/Main.php          |  16 ++++++++++++++++
+ S04/PHP-Files/XMLAdapter.php    |  11 +++++++++++
+ S04/PHP-Files/XMLClassname.php  |  11 +++++++++++
+ S04/PHP-Files/XMLFactory.php    |  39 +++++++++++++++++++++++++++++++++++++++
+ S04/PHP-Files/XMLPassword.php   |  11 +++++++++++
+ S04/PHP-Files/XMLUser.php       |  11 +++++++++++
+ S04/PHP-Files/YamlAdapter.php   |  11 +++++++++++
+ S04/PHP-Files/YamlClassname.php |  10 ++++++++++
+ S04/PHP-Files/YamlFactory.php   |  39 +++++++++++++++++++++++++++++++++++++++
+ S04/PHP-Files/YamlPassword.php  |  11 +++++++++++
+ S04/PHP-Files/YamlUser.php      |  11 +++++++++++
+ S04/factory.sql                 |  26 ++++++++++++++++++++++++++
+ 15 files changed, 229 insertions(+)
+
+commit 2e17a5f356f5b22d7479cbf2fa6addb5d091eb34
+Author: serceg-tgm <serceg@student.tgm.ac.at>
+Date:   Sun Nov 30 12:02:34 2014 +0100
+
+    S04: add protocol to the project
+
+ S04/Erceg_Stefan_S04.docx | Bin 0 -> 57408 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
