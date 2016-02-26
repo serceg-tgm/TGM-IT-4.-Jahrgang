@@ -1,4 +1,6 @@
-Folgende Aufgaben sind in diesem Repo:
+# SEW / INSY / SYT - Übungen aus dem 4. Jahrgang (TGM / IT)
+
+## DezSys-Aufgaben
 
 - DezSys #01 XML und XML Schema
 - DezSys #02 XPath ueber Buchbestand
@@ -9,6 +11,8 @@ Folgende Aufgaben sind in diesem Repo:
 - DezSys #07 PI Calculator
 - DezSys #08 Hallo CORBA
 - DezSys #09 ETL with EAI
+
+## IndInf-Aufgaben
 
 - IndInf #01 Hallo Welt
 - IndInf #02 Taschenrechner
@@ -21,6 +25,8 @@ Folgende Aufgaben sind in diesem Repo:
 - IndInf #09 Debugging with USART
 - IndInf #10 Debugging with Eclipse
 
+## INSY-Aufgaben
+
 - INSY #01 Schokofabrik - DB-Entwurf
 - INSY #02 Schokofabrik - SQL-Abfragen
 - INSY #03 Notizverwaltung
@@ -28,6 +34,8 @@ Folgende Aufgaben sind in diesem Repo:
 - INSY #05 Rueckwaertssalto
 - INSY #06 SQL-Tuning-Vergleich
 - INSY #07 Data Dictionary
+
+## SEW-Aufgaben
 
 - SEW #01 Roboterfabrik
 - SEW #02 Chat fuer Schwerhoerige
